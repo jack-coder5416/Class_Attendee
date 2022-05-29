@@ -69,7 +69,7 @@ Agile methology was followed by implementation of sprint of 6 days in a week , c
   * Write the following command and press enter.
   
   ```
-    $ git clone 
+    $ git clone https://github.com/jack-coder5416/Class_Attendee.git
   ```
     
  #### 2. Install  Python and Django 
