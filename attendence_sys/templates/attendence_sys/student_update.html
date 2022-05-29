@@ -1,0 +1,48 @@
+{% extends 'attendence_sys/main.html' %}
+{% block content %}
+
+<style>
+	.profile-pic{
+		max-width: 200px;
+		max-height:200px;
+		margin: 0 auto;
+		border-radius: 50%;
+	}
+    .card-body{
+        background-color: #f3e6e8;
+        background-image: linear-gradient(to right, #f3e6e8 , #d5d0e5 );
+      }
+      div.card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        
+      }
+</style>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card card-body">
+                    <a class="btn btn-warning" href="{% url 'home' %}"> &#8592; Back to Home</a>
+                    <hr>
+                    <h3 style="text-align: center">Student Profile Pic</h3>
+                    <hr>
+                    <img class="img-responsive profile-pic" src="{{ student.profile_pic.url }}" >
+                </div>
+            </div>
+            <div class="col-md-9" style="margin-bottom: 20px">
+                <form action="{% url 'updateStudent' %}" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="container">
+                    <b>Re-Upload the profile Pic after every Changement!</b>
+
+                    </div>
+                    <div class="form-group" style="visibility: hidden !important;margin-top: -40px;">
+                        <input type="text" class="form-control" value="{{ prev_reg_id }}" name="prev_reg_id">
+                    </div>
+                    {{ form.as_p }}
+                    <input class="btn btn-primary" type="submit" name="Update Information">
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

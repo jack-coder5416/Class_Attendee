@@ -1,0 +1,45 @@
+{% load static %}
+
+
+<style>
+  body{
+    background-color: #f3e6e8;
+    background-image: linear-gradient(to right, #f3e6e8 , #d5d0e5 );
+  }
+  .hello-msg{
+    font-size: 18px;
+    color: #fff;
+    margin-right: 20px;
+  }
+  #nav1
+  {  
+    background-color:#d9e4f5; /*whichever you want*/
+    opacity: 1.0; 
+    filter:(opacity=100);       
+  }
+  
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top transparent" id="nav1">
+ {% comment %} <img src="{% static 'images/logo.png' %}" height="50px" width="250px"> {% endcomment %}
+ <div>
+   <h3 style=color:black>Class Attendee</h3>
+ </div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <span class="nav-link" style=color:black>Hello, {{ request.user.faculty }}</span>
+      </li>
+      <li class="nav-item active">
+        <b><a href="{% url 'home' %}" class="nav-link"style=color:black>Home</a></b>
+      </li>
+      <li class="nav-item">
+        <b><a class="nav-link" href="{% url 'logout' %}"style=color:black>Logout <i class="fa fa-sign-out"></i></a></b>
+      </li>
+      
+    </ul>
+  </div>
+</nav>

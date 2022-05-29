@@ -1,0 +1,171 @@
+ <!DOCTYPE html>
+<html>
+    
+<head>
+	<title>SignUp</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: sans-serif;
+			background: linear-gradient(to right, #6617cb, #cb218e);
+		    
+		}
+		
+		.card{
+			margin-bottom:20px;
+			border:none;
+			margin-left:28%;
+			
+		}
+		
+		.box {
+			width: 500px;
+			padding: 40px;
+			position: center;
+			top: 50%;
+			left: 50%;
+			background-image: linear-gradient(white);
+			text-align: center;
+			transition: 0.25s;
+			margin-top: 100px;
+			
+		}
+		
+		.box input[type="text"],
+		.box input[type="password"] {
+			border: 0;
+			background: none;
+			display: block;
+			margin: 20px auto;
+			text-align: center;
+			border: 2px solid #3498db;
+			padding: 10px 10px;
+			width: 250px;
+			outline: none;
+			color: white;
+			border-radius: 24px;
+			transition: 0.25s
+		}
+		
+		.box h1 {
+			color: white;
+			text-transform: uppercase;
+			font-weight: 500
+		}
+		
+		.box input[type="text"]:focus,
+		.box input[type="password"]:focus {
+			width: 300px;
+			border-color: #2ecc71
+		}
+		
+		.box input[type="submit"] {
+			border: 0;
+			background: none;
+			display: block;
+			margin: 20px auto;
+			text-align: center;
+			border: 2px solid #2ecc71;
+			padding: 14px 40px;
+			outline: none;
+			color: white;
+			border-radius: 24px;
+			transition: 0.25s;
+			cursor: pointer
+		}
+		
+		.box input[type="submit"]:hover {
+			background: #2ecc71
+		}
+		
+		.forgot {
+			text-decoration: underline
+		}
+		h2{
+			color:white;
+		}
+		h4{
+			color: white;
+		}
+		::placeholder { 
+			color: darkgrey;
+			opacity: 3; 
+		  }
+	</style>
+
+</head>
+<body>
+	<div class="container h-100">
+	  <div class="row">
+			<div class="col-md-6"> 
+				<div class="card container mb-6">
+					<form method="POST" action="" class="box">
+						{% csrf_token %}
+						<div>
+							<h2 id="form-title" style="color=res;">SignUp/Register</h2>
+						</div>
+						<div class="d-flex justify-content-center form_container">				
+							<div class="input-group mb-3">
+								<div class="input-group-append">
+									<span class="input-group-text"><i class="fas fa-user"></i></span>
+								</div>
+								{{form.username}}
+								<div class="container" style="color:black;font-size: 10px">
+									!! Username doesn't contain spaces !!
+								</div>
+							</div>
+							<div class="input-group mb-2">
+								<div class="input-group-append">
+									<span class="input-group-text"><i class="fas fa-key"></i></span>
+								</div>
+                                {{form.password1}}
+								<div class="container" style="color:black;font-size: 10px">
+									!! At Least 8 character and Cannot be entirely numeric !!
+								</div>
+							</div>
+                            <div class="input-group mb-2">
+								<div class="input-group-append">
+									<span class="input-group-text"><i class="fas fa-key"></i></span>
+								</div>
+                                {{form.password2}}
+								<div class="container" style="color:black;font-size: 10px">
+									!! Should be same as password !!
+								</div>
+							</div>
+							<div class="d-flex justify-content-center mt-3 signUp_container">
+								<input class="btn signUp_btn" type="submit" value="SignUp">
+							</div>
+                            
+                            <div class="container">
+                                <h4>Already have Account ? <a href="{% url 'login' %}" style="color:indigo;text-decoration: none">Login here</a></h4>
+                             </div>
+						</div>
+                        
+					</form>
+                   
+				</div> 
+			</div> 
+		</div>
+	  
+	</div>
+<script>
+		var form_fields = document.getElementsByTagName('input')
+		form_fields[1].placeholder='Username...';
+		form_fields[2].placeholder='Enter password...';
+		form_fields[3].placeholder='Re-enter Password...';
+
+
+		for (var field in form_fields){	
+			form_fields[field].className += ' form-control'
+		}
+	</script>
+</body>
+
+</html> 
