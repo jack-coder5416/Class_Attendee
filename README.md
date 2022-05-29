@@ -21,7 +21,7 @@ After successfully login HomePage appears there will be four cards **Take Attend
 **Add Student** 
 This is foremost thing to do , you need to add all students of class into it only one time they all record into the database. There is number of fields **First Name , Last Name , Registration ID , Branch , Year , Section and most required thing Profile Picture** |<img width="449" alt="image" src="https://user-images.githubusercontent.com/79541495/170815009-79ad688a-d771-4d3e-b2d0-473c1d79c560.png">
 **Take Attendance** 
-Professor need to enter the details about class like **Branch , Year , Section and Period**. There is also a feature that In a day the attendance of same period again is not allowed | <img width="423" alt="image" src="https://user-images.githubusercontent.com/79541495/170815034-686e884b-680d-4137-908a-8e3676e07f06.png">
+Professor need to enter the details about class like **Branch , Year , Section and Period**. There is also a feature that In a day the attendance of same period again is not allowed and to save the attendance when the python window open **PRESS S KEY ON KEYBOARD**| <img width="423" alt="image" src="https://user-images.githubusercontent.com/79541495/170815034-686e884b-680d-4137-908a-8e3676e07f06.png">
 **Update Student Details** 
 Professor can update the details of registered students. Here professor need to enter the **Registration ID and branch**.|<img width="441" alt="image" src="https://user-images.githubusercontent.com/79541495/170815122-cce7cc72-8e63-4d1b-aa72-e4b09f7bd60e.png">
 **Search Attendance**
