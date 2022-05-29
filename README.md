@@ -36,7 +36,7 @@ Feature | Images
 ------------ | -------------
 **Face Visibility** The Face appear on a window over there a green box mention your **Registration ID**. |<img width="916" alt="image" src="https://user-images.githubusercontent.com/79541495/170849612-749ab4a2-1453-4cfb-8786-1c686087ffd0.png">
 **Multiple Face Recognition** As the foremost feature that we can record attendance of multiple students , we can also scan profile pictures on teams,meet meeting as well as in physical classes too | <img width="935" alt="image" src="https://user-images.githubusercontent.com/79541495/170849592-a488ebf3-60bd-4881-ab8d-632eff4ce601.png">
-**Marking Attendance** To record the attendance first the system automatically scanned the faces and you as a professor need to **press S key** and then you will redirected to present period attendance detail.| <img width="955" alt="image" src="https://user-images.githubusercontent.com/79541495/170851777-cf34e7c5-ad28-4c90-8f94-953216e2232b.png">
+**Marking Attendance** To record the attendance first the system automatically scanned the faces and you as a professor need to **PRESS S KEY** and then you will redirected to present period attendance detail.| <img width="955" alt="image" src="https://user-images.githubusercontent.com/79541495/170851777-cf34e7c5-ad28-4c90-8f94-953216e2232b.png">
 
 
 
